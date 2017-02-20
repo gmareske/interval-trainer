@@ -1,0 +1,60 @@
+
+body {
+    background: #EEE;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+header div a {
+    color: #333;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+}
+.hero {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#interval {
+    font-size: 300%;
+}
+.answer {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.piano {
+    
+}
+.piano-key {
+    display: inline-block;
+    position: relative;
+    margin: 0 2px;
+    width: 6%;
+    max-width: 85px;
+    
+}
+.white {
+    background: linear_gradient(-30deg, #f8f8f8, #ffffff);
+}
+.black {
+    background: linear_gradient(-20deg, #222, #000, #222);
+    position: absolute;
+    top: 0px;
+    right: -40%;
+    width: 70%;
+    z-index: 10;
+}
+
+footer {
+
+}
