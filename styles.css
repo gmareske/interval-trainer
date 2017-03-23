@@ -38,20 +38,29 @@ header div a {
     display: inline-block;
     position: relative;
     margin: 0 2px;
-    width: 6%;
+    width: 150px;
+    height: 100px;
     max-width: 85px;
+    border: 1px solid black;
+    border-radius: 10px;
     
 }
 .white {
-    background: linear_gradient(-30deg, #f8f8f8, #ffffff);
+    background: linear-gradient(-30deg, #f8f8f8, #ffffff);
+    margin-right: -1px;
+    z-index: 0;
 }
 .black {
-    background: linear_gradient(-20deg, #222, #000, #222);
-    position: absolute;
-    top: 0px;
-    right: -40%;
-    width: 70%;
+    background: linear-gradient(-20deg, #222, #000, #222);
+    bottom: 20px;
+    width: 3%;
     z-index: 10;
+    margin-right: -3%;
+    margin-left: -3%;
+}
+
+.active {
+    background: red;
 }
 
 footer {

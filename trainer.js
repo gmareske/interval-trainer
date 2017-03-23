@@ -41,6 +41,8 @@ const newInterval = function() {
 }
 
 const updateNote = function(interval) {
+    let key = document.getElementById(CURRENT_NOTE.toString());
+    key.classList.remove("active");
     CURRENT_NOTE += interval;
     if (CURRENT_NOTE < 0) {
 	CURRENT_NOTE += 12;
@@ -49,6 +51,9 @@ const updateNote = function(interval) {
     }
     let elem = document.getElementById("currentNote");
     elem.innerText = "Current Note: " + scale[CURRENT_NOTE];
+    key = document.getElementById(CURRENT_NOTE.toString());
+    key.classList.add("active");
+    
 }
 
 const updateTimes = function() {
