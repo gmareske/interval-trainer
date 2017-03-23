@@ -28,6 +28,7 @@ const scale = [
     ]
 
 CURRENT_NOTE = 0;
+TOTAL_CLICKS = 0;
 
 const getIntervalName = function(steps) {
     for(var i in intervals) {
@@ -50,6 +51,11 @@ const updateNote = function(interval) {
     elem.innerText = "Current Note: " + scale[CURRENT_NOTE];
 }
 
+const updateTimes = function() {
+    let elem = document.getElementById("numTimes");
+    elem.innerText = "You've guessed " + TOTAL_CLICKS + " intervals.";
+}
+
 const updateInterval = function() {
     let interval = newInterval();
     let intervalName = getIntervalName(interval);
@@ -59,6 +65,16 @@ const updateInterval = function() {
     updateNote(interval);
     let elem = document.getElementById("interval");
     elem.innerText = directionChar + ' ' + intervalName;
+    document.getElementById("answer").style.display = 'none';
+    TOTAL_CLICKS += 1;
+    updateTimes();
 }
 
+const toggleNoteVisible = function() {
+    let elem = document.getElementById("answer");
+    elem.style.display = elem.style.display === 'none' ? 'block' : 'none';
+}
+
+updateInterval();
 document.getElementById("interval").addEventListener('click', updateInterval);
+document.getElementById("toggleVisible").addEventListener('click', toggleNoteVisible);
