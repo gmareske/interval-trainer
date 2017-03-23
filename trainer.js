@@ -14,16 +14,16 @@ const intervals = {
 }
 const scale = [
     'C',
-    'C#/Db',
+    'C\u266f/D\u266d',
     'D',
-    'D#/Eb',
+    'D\u266f/E\u266d',
     'E',
     'F',
-    'F#/Gb',
+    'F\u266f/G\u266d',
     'G',
-    'G#/Ab',
+    'G\u266f/A\u266d',
     'A',
-    'A#/Bb',
+    'A\u266f/B\u266d',
     'B',
     ]
 
