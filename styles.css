@@ -38,7 +38,7 @@ header div a {
     display: inline-block;
     position: relative;
     margin: 0 2px;
-    width: 8%;
+    width: 10%;
     height: 100px;
     max-width: 100px;
     border: 1px solid black;
@@ -52,8 +52,10 @@ header div a {
 }
 .black {
     background: linear-gradient(-20deg, #222, #000, #222);
-    bottom: 20px;
+    bottom: 30px;
+    right: 10px;
     width: 3%;
+    height: 80px;
     z-index: 10;
     margin-right: -3%;
     margin-left: -3%;
