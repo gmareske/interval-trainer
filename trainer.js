@@ -1,4 +1,3 @@
-
 const intervals = {
     m2: 1,
     M2: 2,
@@ -13,6 +12,20 @@ const intervals = {
     M7: 11,
     P8: 0,
 }
+const scale = [
+    'C',
+    'C#/Db',
+    'D',
+    'D#/Eb',
+    'E',
+    'F',
+    'F#/Gb',
+    'G',
+    'G#/Ab',
+    'A',
+    'A#/Bb',
+    'B',
+    ]
 
 CURRENT_NOTE = 0;
 
@@ -26,12 +39,24 @@ const newInterval = function() {
     return Math.floor(Math.random() * 12);
 }
 
+const updateNote = function(interval) {
+    CURRENT_NOTE += interval;
+    if (CURRENT_NOTE < 0) {
+	CURRENT_NOTE += 12;
+    } else if (CURRENT_NOTE > 11) {
+	CURRENT_NOTE -= 12;
+    }
+    let elem = document.getElementById("currentNote");
+    elem.innerText = "Current Note: " + scale[CURRENT_NOTE];
+}
+
 const updateInterval = function() {
     let interval = newInterval();
     let intervalName = getIntervalName(interval);
     let direction = Math.random() > .5 ? 1 : -1;
     let directionChar = direction > 0 ? '\u2191' : '\u2193';
     interval *= direction;
+    updateNote(interval);
     let elem = document.getElementById("interval");
     elem.innerText = directionChar + ' ' + intervalName;
 }
