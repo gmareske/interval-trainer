@@ -15,6 +15,11 @@ header div a {
     text-align: center;
     padding: 1rem;
 }
+header div:hover {
+    border-bottom: 2px solid black;
+    background-color: #c9c9c9;
+    border-radius: 10px;
+}
 .hero {
     width: 100%;
     display: flex;
@@ -24,6 +29,15 @@ header div a {
 }
 #interval {
     font-size: 300%;
+}
+button {
+    background-color: #EEE;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 10px;
 }
 .answer {
     display:flex;
@@ -56,8 +70,8 @@ header div a {
     height: 80px;
     z-index: 10;
     margin-right: -3%;
-    margin-left: -3%;
-}
+    margin-left: -3%;}
+
 
 .active {
     background: red;
